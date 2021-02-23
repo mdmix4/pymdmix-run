@@ -26,5 +26,6 @@ setup(
     url="https://github.com/ggutierrez-bio/mdmix4/pymdmix-run",
     packages=["pymdmix_run"],
     install_requires=getRequirements(),
-    classifiers=['Development Status :: 3 - Alpha']
+    classifiers=['Development Status :: 3 - Alpha'],
+    scripts=["bin/mdmix-run"],
 )
