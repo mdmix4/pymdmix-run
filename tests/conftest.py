@@ -1,9 +1,7 @@
-from contextlib import contextmanager
 import os
 import shlex
 from typing import Optional
 
-from unittest.mock import patch
 from pymdmix_core.plugin import PluginManager
 from pymdmix_core.parser import get_mdmix_parser
 

@@ -20,7 +20,7 @@ def test_run_plugin_on_files(capfd, times):
     plugin_manager.load_plugin("pymdmix_run")
     command = ["run"] + times * [input_file]
     run_command(" ".join(command), plugin_manager)
-    out, _  = capfd.readouterr()
+    out, _ = capfd.readouterr()
     out = out.split("\n")
     assert out.count("\t- plugin") == times
     assert out.count("\t- run") == times
@@ -32,7 +32,7 @@ def test_run_plugin_on_stdin(capfd):
     plugin_manager.load_plugin("pymdmix_core")
     plugin_manager.load_plugin("pymdmix_run")
     run_command("run", plugin_manager)
-    out, _  = capfd.readouterr()
+    out, _ = capfd.readouterr()
     out = out.split("\n")
     assert out.count("\t- plugin") == 1
     assert out.count("\t- run") == 1
