@@ -17,15 +17,15 @@ def getVersion():
 
 setup(
     python_requires=">=3.8",
-    name="pymdmix-plugin-template",
+    name="pymdmix-run",
     version=getVersion(),
     license="MIT",
-    description="Plugin template for kick-starting a new project",
+    description="pymdmix plugin for command interpreter",
     author="ggutierrez-bio",
     author_email="",
-    url="https://github.com/ggutierrez-bio/mdmix4",
-    data_files=[("pymdmix", ["defaults/pymdmix_plugin_template.yml"])],
-    packages=["pymdmix_plugin_template"],
+    url="https://github.com/ggutierrez-bio/mdmix4/pymdmix-run",
+    packages=["pymdmix_run"],
     install_requires=getRequirements(),
-    classifiers=['Development Status :: 3 - Alpha']
+    classifiers=['Development Status :: 3 - Alpha'],
+    scripts=["bin/mdmix-run"],
 )
